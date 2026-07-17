@@ -1,0 +1,23 @@
+name: Notify IndexNow
+
+on:
+  workflow_run:
+    workflows: ["Deploy static site to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit updated public URLs
+        run: |
+          curl --fail-with-body --retry 2 \
+            --request POST \
+            --header 'Content-Type: application/json; charset=utf-8' \
+            --data '{"host":"scappe.github.io","key":"f42b5eff916c8c8f7647adb6821da502","keyLocation":"https://scappe.github.io/motionprompt-studio-site/f42b5eff916c8c8f7647adb6821da502.txt","urlList":["https://scappe.github.io/motionprompt-studio-site/","https://scappe.github.io/motionprompt-studio-site/prompt-checker.html","https://scappe.github.io/motionprompt-studio-site/guides/","https://scappe.github.io/motionprompt-studio-site/guides/ai-video-prompt-anatomy.html","https://scappe.github.io/motionprompt-studio-site/guides/ai-video-prompt-template.html","https://scappe.github.io/motionprompt-studio-site/guides/ai-video-negative-prompt-guide.html","https://scappe.github.io/motionprompt-studio-site/guides/identity-drift-ai-video.html","https://scappe.github.io/motionprompt-studio-site/privacy.html"]}' \
+            https://api.indexnow.org/indexnow

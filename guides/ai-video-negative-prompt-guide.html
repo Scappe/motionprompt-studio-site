@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Video Negative Prompt Guide: Short, Specific Failure Controls</title>
+  <meta name="description" content="Write useful AI-video negative prompts for flicker, identity drift, warped products, camera shake and background instability without creating prompt soup.">
+  <meta name="theme-color" content="#07110e">
+  <link rel="canonical" href="https://scappe.github.io/motionprompt-studio-site/guides/ai-video-negative-prompt-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://scappe.github.io/motionprompt-studio-site/guides/ai-video-negative-prompt-guide.html">
+  <meta property="og:title" content="AI Video Negative Prompt Guide">
+  <meta property="og:description" content="Choose concrete failure controls instead of an overloaded list of generic negatives.">
+  <meta property="og:image" content="https://scappe.github.io/motionprompt-studio-site/assets/fix-lab.png">
+  <meta property="og:site_name" content="Quercia2">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://scappe.github.io/motionprompt-studio-site/assets/fix-lab.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Video Negative Prompt Guide: Short, Specific Failure Controls",
+    "description": "A practical method for selecting failure-specific negative direction in AI-video prompts.",
+    "datePublished": "2026-07-17",
+    "dateModified": "2026-07-17",
+    "author": {"@type": "Organization", "name": "Quercia2"},
+    "publisher": {"@type": "Organization", "name": "Quercia2"},
+    "mainEntityOfPage": "https://scappe.github.io/motionprompt-studio-site/guides/ai-video-negative-prompt-guide.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to guide</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="MotionPrompt Studio home"><span class="brand-mark" aria-hidden="true">Q2</span><span>Quercia2</span></a>
+    <nav class="header-actions" aria-label="Primary navigation">
+      <a class="header-link" href="index.html">All guides</a>
+      <a class="header-link" href="../prompt-checker.html">Free prompt checker</a>
+      <a class="header-cta tracked-link" data-placement="negative_header" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=negative_prompt_guide&amp;utm_medium=organic&amp;utm_campaign=founding_studio_launch">Get MotionPrompt Studio</a>
+    </nav>
+  </header>
+
+  <main class="article-page" id="article">
+    <p class="article-kicker">AI-video negative direction</p>
+    <h1>Write the failure you can see.</h1>
+    <p class="article-deck">A negative prompt is most useful when it blocks a concrete failure that would invalidate the shot. It is less useful as a long inventory of every artifact that could exist.</p>
+    <div class="article-meta"><span>By Quercia2</span><span>Published 17 July 2026</span><span>7-minute read</span></div>
+
+    <h2>Start from the shot, not a universal list</h2>
+    <p>A talking close-up, a product rotation and a liquid macro shot fail in different ways. The close-up may need stable facial features and restrained head motion. The product shot may need fixed packaging geometry and label orientation. The liquid shot may need believable gravity and continuous flow.</p>
+    <p>Begin with the three to eight failures that would make this specific output unusable. Keep the positive brief responsible for what you want; use negative direction for the visible outcomes you need to exclude.</p>
+
+    <h2>Five useful failure families</h2>
+    <h3>Temporal stability</h3>
+    <p>Use when frames do not agree with one another: flicker, lighting pulses, texture crawling, abrupt style changes, sudden cuts or a background that reconfigures during the shot.</p>
+    <div class="article-example good"><span>EXAMPLE</span><p>No frame flicker, lighting pulses, background changes or abrupt cuts.</p></div>
+
+    <h3>Identity and anatomy</h3>
+    <p>Use when a person or character changes across the clip. Name the specific failure: facial morphing, changing hairstyle, wardrobe drift, extra fingers or duplicated limbs. Pair the negative with a positive continuity rule that states which features must remain unchanged.</p>
+    <div class="article-example good"><span>EXAMPLE</span><p>Preserve the same face, hairstyle and blue jacket throughout. No facial morphing, duplicate features, extra fingers or wardrobe changes.</p></div>
+
+    <h3>Product and object geometry</h3>
+    <p>Use for packaging, logos, furniture, devices and other objects whose silhouette or surface details matter. Protect proportions, counts, label placement and material behavior.</p>
+    <div class="article-example good"><span>EXAMPLE</span><p>No warped packaging, changing cap, mirrored label, duplicate bottle, melting edges or scale changes.</p></div>
+
+    <h3>Camera behavior</h3>
+    <p>Negative camera direction is valuable when the shot should be controlled. If the positive brief says “locked tripod”, exclude shake, orbit, zoom, reframing and focus breathing rather than adding another vague word such as “smooth”.</p>
+    <div class="article-example good"><span>EXAMPLE</span><p>Locked camera. No shake, orbit, zoom, reframing, focus breathing or sudden perspective shift.</p></div>
+
+    <h3>Physics and environment</h3>
+    <p>Use when motion must obey a visible physical rule: liquid should fall with gravity, fabric should not pass through a body, and objects should not float, teleport or merge. Keep the rule close to the action it controls.</p>
+
+    <h2>Why long negative lists fail as a workflow</h2>
+    <p>A list copied from another shot may contain irrelevant or competing exclusions. It also makes diagnosis harder: if the result improves, you do not know which instruction helped. A shorter list lets you change one failure family at a time and preserve the parts that already work.</p>
+
+    <h2>A repeatable repair loop</h2>
+    <ol>
+      <li>Review the output and name the first visible failure that makes it unusable.</li>
+      <li>Strengthen the matching positive preservation rule.</li>
+      <li>Add one short negative block for that failure family.</li>
+      <li>Keep camera, action and timing unchanged unless they caused the failure.</li>
+      <li>Generate one controlled comparison and record what changed.</li>
+    </ol>
+
+    <div class="article-example bad"><span>OVERLOADED</span><p>No glitches, no bad quality, no ugly image, no distortion, no blur, no noise, no artifacts, no weirdness, no errors, no problems, no unnatural anything.</p></div>
+    <div class="article-example good"><span>SHOT-SPECIFIC</span><p>Preserve bottle geometry and label orientation. No warped glass, mirrored label, duplicate bottle, lighting flicker or camera shake.</p></div>
+
+    <section class="article-cta">
+      <p class="eyebrow">Diagnose before rerolling</p>
+      <h2>Check the prompt, then repair one failure at a time.</h2>
+      <a class="button button-secondary" href="../prompt-checker.html">Run the free preflight</a>
+      <a class="button button-primary tracked-link" data-placement="negative_final" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=negative_prompt_guide&amp;utm_medium=organic&amp;utm_campaign=founding_studio_launch">Open the 15-block Fix Lab</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">Q2</span><span>Quercia2</span></a>
+    <p><a href="index.html">Prompt guides</a> · <a href="../prompt-checker.html">Free Prompt Preflight</a> · <a href="../privacy.html">Privacy</a></p>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

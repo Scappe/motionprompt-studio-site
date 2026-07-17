@@ -19,6 +19,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://scappe.github.io/motionprompt-studio-site/guides/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scappe.github.io/motionprompt-studio-site/guides/ai-video-prompt-template.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scappe.github.io/motionprompt-studio-site/guides/ai-video-negative-prompt-guide.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scappe.github.io/motionprompt-studio-site/guides/identity-drift-ai-video.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://scappe.github.io/motionprompt-studio-site/privacy.html</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>yearly</changefreq>

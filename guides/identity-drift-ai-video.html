@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Reduce Identity Drift in AI Video Prompts</title>
+  <meta name="description" content="Reduce face, character and product identity drift in AI video with stable anchors, limited motion, continuity rules and controlled repair prompts.">
+  <meta name="theme-color" content="#07110e">
+  <link rel="canonical" href="https://scappe.github.io/motionprompt-studio-site/guides/identity-drift-ai-video.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://scappe.github.io/motionprompt-studio-site/guides/identity-drift-ai-video.html">
+  <meta property="og:title" content="How to Reduce Identity Drift in AI Video">
+  <meta property="og:description" content="A continuity-first prompt workflow for keeping a person, object or product stable across a clip.">
+  <meta property="og:image" content="https://scappe.github.io/motionprompt-studio-site/assets/before-after.png">
+  <meta property="og:site_name" content="Quercia2">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://scappe.github.io/motionprompt-studio-site/assets/before-after.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Reduce Identity Drift in AI Video Prompts",
+    "description": "A continuity-first prompt workflow for reducing identity drift in AI-video generation.",
+    "datePublished": "2026-07-17",
+    "dateModified": "2026-07-17",
+    "author": {"@type": "Organization", "name": "Quercia2"},
+    "publisher": {"@type": "Organization", "name": "Quercia2"},
+    "mainEntityOfPage": "https://scappe.github.io/motionprompt-studio-site/guides/identity-drift-ai-video.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to guide</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="MotionPrompt Studio home"><span class="brand-mark" aria-hidden="true">Q2</span><span>Quercia2</span></a>
+    <nav class="header-actions" aria-label="Primary navigation">
+      <a class="header-link" href="index.html">All guides</a>
+      <a class="header-link" href="../prompt-checker.html">Free prompt checker</a>
+      <a class="header-cta tracked-link" data-placement="drift_header" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=identity_drift_guide&amp;utm_medium=organic&amp;utm_campaign=founding_studio_launch">Get MotionPrompt Studio</a>
+    </nav>
+  </header>
+
+  <main class="article-page" id="article">
+    <p class="article-kicker">Continuity for AI video</p>
+    <h1>Reduce how many things can change.</h1>
+    <p class="article-deck">Identity drift is easier to diagnose when the brief clearly separates the subject’s stable features from the one motion the shot is supposed to perform.</p>
+    <div class="article-meta"><span>By Quercia2</span><span>Published 17 July 2026</span><span>7-minute read</span></div>
+
+    <h2>What identity drift looks like</h2>
+    <p>Identity drift is any unwanted change that makes the subject stop matching its earlier frames or reference. A face may subtly morph, hair may change length, clothing may switch details, a product may lose its proportions, or a logo may rotate and redraw itself.</p>
+    <p>The term applies to people, characters, products and repeated objects. The common problem is continuity: the generation is being asked to invent motion while also preserving a visual system.</p>
+
+    <h2>Build a small identity anchor</h2>
+    <p>Choose the few traits that must remain visible and unchanged. More adjectives do not automatically create a stronger anchor. Prioritize features that are easy to compare from frame to frame.</p>
+    <ul>
+      <li><strong>Person:</strong> face identity, hair shape and color, one wardrobe description, one distinctive accessory.</li>
+      <li><strong>Character:</strong> silhouette, color palette, face design, costume and scale.</li>
+      <li><strong>Product:</strong> overall geometry, cap or closure, label placement, logo orientation, material and proportions.</li>
+    </ul>
+
+    <div class="article-example good">
+      <span>IDENTITY ANCHOR</span>
+      <p>The same adult woman with a short black bob, round silver glasses and a cobalt blue jacket remains visually consistent throughout the clip.</p>
+    </div>
+
+    <h2>Limit simultaneous change</h2>
+    <p>Large head turns, fast body movement, strong camera orbits, dramatic lighting changes and a transforming background all demand new visual information. When several happen at once, it becomes harder to preserve the subject.</p>
+    <p>For a continuity test, keep the first run simple: one action, one camera behavior and stable lighting. If identity holds, introduce additional motion in later tests instead of asking the first generation to solve every creative ambition.</p>
+
+    <h2>Write continuity as a preservation rule</h2>
+    <p>A preservation rule names what cannot change and where the rule applies. It should be separate from style language so it remains easy to review and repair.</p>
+    <div class="article-example good">
+      <span>PERSON</span>
+      <p>Preserve the same facial structure, hairstyle, glasses, jacket color and body proportions in every frame. No facial morphing, wardrobe changes or duplicate features.</p>
+    </div>
+    <div class="article-example good">
+      <span>PRODUCT</span>
+      <p>Preserve the bottle silhouette, glass thickness, cap height, cream label position, black logo orientation and product scale throughout. No warped packaging, mirrored label or changing cap.</p>
+    </div>
+
+    <h2>Stabilize the camera when identity matters most</h2>
+    <p>A locked shot or restrained move makes the comparison easier. If the camera must move, choose one slow behavior and state what must not happen: no orbit, no sudden perspective shift, no aggressive reframing and no focus breathing. This is not a universal model rule; it is a controlled testing strategy.</p>
+
+    <h2>Use a repair run, not a full rewrite</h2>
+    <ol>
+      <li>Find the first frame where the subject stops matching.</li>
+      <li>Name the exact change: face shape, hair, label, object count, scale or material.</li>
+      <li>Strengthen only the matching preservation rule.</li>
+      <li>Reduce the motion or camera demand that coincides with the drift.</li>
+      <li>Keep the rest of the successful brief unchanged and run one comparison.</li>
+    </ol>
+
+    <div class="article-example bad"><span>VAGUE REPAIR</span><p>Keep everything consistent and realistic, no glitches.</p></div>
+    <div class="article-example good"><span>TARGETED REPAIR</span><p>During the head turn, preserve the same jawline, eye spacing, black bob and round silver glasses. Limit the turn to 15 degrees over two seconds. No facial morphing or hairstyle change.</p></div>
+
+    <h2>Preflight questions</h2>
+    <ul>
+      <li>Can you list the subject’s stable anchors in one sentence?</li>
+      <li>Is the shot asking the subject, camera, lighting and background to change at the same time?</li>
+      <li>Does continuity name visible features rather than “consistency” in general?</li>
+      <li>Can the first test use a smaller movement?</li>
+      <li>Does the repair target the first observable drift instead of rewriting the whole prompt?</li>
+    </ul>
+
+    <section class="article-cta">
+      <p class="eyebrow">Protect the stable parts</p>
+      <h2>Check continuity before you generate.</h2>
+      <a class="button button-secondary" href="../prompt-checker.html">Run the free preflight</a>
+      <a class="button button-primary tracked-link" data-placement="drift_final" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=identity_drift_guide&amp;utm_medium=organic&amp;utm_campaign=founding_studio_launch">Use the identity-drift repair block</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">Q2</span><span>Quercia2</span></a>
+    <p><a href="index.html">Prompt guides</a> · <a href="../prompt-checker.html">Free Prompt Preflight</a> · <a href="../privacy.html">Privacy</a></p>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

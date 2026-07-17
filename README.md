@@ -25,6 +25,12 @@ It includes 18 editable presets, 60 blueprint prompts, 24 client-ready campaign 
 
 [AI Video Prompt Anatomy: The Six-Layer Production Brief](https://scappe.github.io/motionprompt-studio-site/guides/ai-video-prompt-anatomy.html) explains how to turn polished prompt prose into explicit, testable shot direction.
 
+More free production notes:
+
+- [Copy-ready AI video prompt template](https://scappe.github.io/motionprompt-studio-site/guides/ai-video-prompt-template.html)
+- [AI video negative prompt guide](https://scappe.github.io/motionprompt-studio-site/guides/ai-video-negative-prompt-guide.html)
+- [How to reduce identity drift in AI video](https://scappe.github.io/motionprompt-studio-site/guides/identity-drift-ai-video.html)
+
 ## Privacy and limitations
 
 The free checker is a lightweight heuristic, not a guarantee of model behavior. It uses no account, API key, analytics cookie or remote prompt processing. Product and model names belong to their respective owners.
