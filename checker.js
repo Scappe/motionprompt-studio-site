@@ -5,6 +5,8 @@ const clearButton = document.querySelector("#clear-button");
 const scoreElement = document.querySelector("#score");
 const scoreCaption = document.querySelector("#score-caption");
 const recommendationList = document.querySelector("#recommendation-list");
+const feedbackElement = document.querySelector("#checker-feedback");
+const resultsElement = document.querySelector("#results");
 
 const rules = [
   {
@@ -65,7 +67,16 @@ function setRecommendations(items) {
   }
 }
 
-function analyzePrompt() {
+function showFeedback(message, revealResults = false) {
+  feedbackElement.textContent = message;
+  feedbackElement.hidden = false;
+
+  if (revealResults && window.innerWidth <= 700 && typeof resultsElement.scrollIntoView === "function") {
+    resultsElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function analyzePrompt(revealResults = false) {
   const prompt = input.value.trim();
 
   if (!prompt) {
@@ -73,6 +84,8 @@ function analyzePrompt() {
     scoreCaption.textContent = "Add a prompt to begin.";
     for (const rule of rules) updateSignal(rule.id, false);
     setRecommendations(["Paste a prompt and select “Check prompt”."]);
+    showFeedback("Paste a prompt first, then select “Check prompt”.");
+    input.focus();
     return;
   }
 
@@ -113,19 +126,24 @@ function analyzePrompt() {
 
   if (notes.length === 0) notes.push("All six preflight signals are present. Check that each instruction is concrete and non-conflicting.");
   setRecommendations(notes);
+  showFeedback(`Preflight complete — ${score}/100. Review the signals and notes below.`, revealResults);
 }
 
-analyzeButton.addEventListener("click", analyzePrompt);
+analyzeButton.addEventListener("click", () => analyzePrompt(true));
 
 exampleButton.addEventListener("click", () => {
   input.value = "9:16 close-up product shot. A creator holds the same skincare bottle label-forward and rotates her wrist once over 2 seconds. Locked tripod camera, 85 mm lens, centered framing. Preserve face identity, finger count, bottle geometry, cap shape and logo orientation. No camera orbit, focus breathing, hand deformation, text drift or background warping.";
-  analyzePrompt();
+  analyzePrompt(true);
   input.focus();
 });
 
 clearButton.addEventListener("click", () => {
   input.value = "";
-  analyzePrompt();
+  scoreElement.textContent = "0";
+  scoreCaption.textContent = "Add a prompt to begin.";
+  for (const rule of rules) updateSignal(rule.id, false);
+  setRecommendations(["Paste a prompt and select “Check prompt”."]);
+  feedbackElement.hidden = true;
   input.focus();
 });
 

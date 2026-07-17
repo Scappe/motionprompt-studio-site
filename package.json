@@ -1,0 +1,14 @@
+{
+  "name": "motionprompt-studio-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/checker.test.cjs",
+    "validate": "html-validate index.html prompt-checker.html privacy.html guides/*.html",
+    "check": "node --check checker.js && node --check script.js && npm run test && npm run validate"
+  },
+  "devDependencies": {
+    "html-validate": "11.5.6",
+    "jsdom": "29.1.1"
+  }
+}

@@ -332,6 +332,8 @@ footer p a { color: var(--ink); }
 .checker-controls button { min-height: 45px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 10px; background: transparent; color: var(--ink); cursor: pointer; font: inherit; font-weight: 800; }
 .checker-controls .analyze-button { border-color: transparent; background: var(--accent); color: #07110e; }
 .checker-controls button:focus-visible { outline: 3px solid rgba(184, 244, 95, 0.48); outline-offset: 2px; }
+.checker-feedback { margin: 14px 0 0; padding: 11px 13px; border: 1px solid rgba(184, 244, 95, 0.24); border-radius: 10px; background: rgba(184, 244, 95, 0.07); color: #dfffb0; font-size: 0.82rem; font-weight: 750; }
+.checker-feedback[hidden] { display: none; }
 .checker-results { display: grid; grid-template-columns: 190px 1fr; gap: clamp(24px, 5vw, 50px); padding: clamp(24px, 5vw, 44px); }
 .score-ring { display: grid; width: 154px; height: 154px; place-content: center; border: 10px solid rgba(255, 255, 255, 0.06); border-radius: 50%; background: radial-gradient(circle, rgba(184, 244, 95, 0.08), transparent 70%); text-align: center; }
 .score-ring strong { color: var(--accent); font-size: 3rem; line-height: 1; }
