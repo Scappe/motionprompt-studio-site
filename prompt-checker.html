@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free AI Video Prompt Checker — Prompt Preflight</title>
+  <meta name="description" content="Check an AI-video prompt for camera, motion, timing, framing, continuity and negative direction before you generate. Free and private; runs locally.">
+  <meta name="theme-color" content="#07110e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free AI Video Prompt Preflight">
+  <meta property="og:description" content="Catch missing direction and common prompt risks before spending an AI-video generation.">
+  <meta property="og:image" content="assets/before-after.png">
+  <meta property="og:site_name" content="Quercia2">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AI Video Prompt Preflight",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "description": "A free local checker for camera, motion, timing, framing, continuity and negative direction in AI-video prompts.",
+    "brand": {"@type": "Brand", "name": "Quercia2"},
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
+  }
+  </script>
+</head>
+<body class="tool-page">
+  <a class="skip-link" href="#checker">Skip to checker</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="MotionPrompt Studio home">
+      <span class="brand-mark" aria-hidden="true">Q2</span>
+      <span>Quercia2</span>
+    </a>
+    <nav class="header-actions" aria-label="Primary navigation">
+      <a class="header-link" href="index.html">MotionPrompt Studio</a>
+      <a class="header-cta tracked-link" data-placement="checker_header" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=prompt_preflight&amp;utm_medium=free_tool&amp;utm_campaign=founding_studio_launch">Get the full toolkit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <p class="eyebrow">Free AI-video prompt checker</p>
+      <h1>Run a prompt preflight before you generate.</h1>
+      <p class="hero-lede">Check whether your prompt gives the model clear camera, motion, timing, framing, continuity and negative direction. It takes seconds.</p>
+      <span class="privacy-note">Runs in your browser. Your prompt is not uploaded.</span>
+    </section>
+
+    <section class="checker-shell" id="checker" aria-labelledby="checker-title">
+      <h2 id="checker-title" class="visually-hidden">AI video prompt checker</h2>
+      <div class="checker-card">
+        <div class="checker-input">
+          <label for="prompt-input">Paste your AI-video prompt</label>
+          <textarea id="prompt-input" placeholder="Example: Close-up product shot of a glass perfume bottle..." spellcheck="true"></textarea>
+          <div class="checker-controls">
+            <button class="analyze-button" id="analyze-button" type="button">Check prompt</button>
+            <button id="example-button" type="button">Load example</button>
+            <button id="clear-button" type="button">Clear</button>
+          </div>
+        </div>
+        <div class="checker-results" id="results" aria-live="polite">
+          <div>
+            <div class="score-ring" id="score-ring"><strong id="score">0</strong><span>/ 100</span></div>
+            <p class="score-caption" id="score-caption">Add a prompt to begin.</p>
+          </div>
+          <div>
+            <ul class="signal-list" id="signal-list">
+              <li data-signal="camera"><span>Camera direction</span><b>Missing</b></li>
+              <li data-signal="motion"><span>Subject motion</span><b>Missing</b></li>
+              <li data-signal="timing"><span>Timing</span><b>Missing</b></li>
+              <li data-signal="framing"><span>Framing / format</span><b>Missing</b></li>
+              <li data-signal="continuity"><span>Continuity</span><b>Missing</b></li>
+              <li data-signal="negative"><span>Negative direction</span><b>Missing</b></li>
+            </ul>
+            <div class="recommendations">
+              <h2>Preflight notes</h2>
+              <ul id="recommendation-list"><li>Paste a prompt and select “Check prompt”.</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="checker-explain">
+      <div class="section-heading compact">
+        <p class="eyebrow">What the checker looks for</p>
+        <h2>Six signals that make direction testable.</h2>
+      </div>
+      <div class="checker-explain-grid">
+        <article><h3>Camera and framing</h3><p>Shot size, lens behavior, camera movement and output format should not be left to guesswork.</p></article>
+        <article><h3>Motion and timing</h3><p>Define what moves, how it moves and the interval in which the action should happen.</p></article>
+        <article><h3>Continuity and negatives</h3><p>Protect identity, geometry and object counts, then state the failures the model must avoid.</p></article>
+      </div>
+      <p class="article-link"><a href="guides/ai-video-prompt-anatomy.html">Read the complete six-layer AI-video prompt guide →</a></p>
+    </section>
+
+    <section class="checker-upsell">
+      <p class="eyebrow">Need the complete production brief?</p>
+      <h2>Go from a quick check to a structured, model-aware workflow.</h2>
+      <p>MotionPrompt Studio adds a full production builder, readiness risk scan, 18 presets, 84 shot scenarios and 15 targeted Fix Lab blocks.</p>
+      <a class="button button-primary tracked-link" data-placement="checker_result" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=prompt_preflight&amp;utm_medium=free_tool&amp;utm_campaign=founding_studio_launch">Explore MotionPrompt Studio</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">Q2</span><span>Quercia2</span></a>
+    <p><a href="guides/ai-video-prompt-anatomy.html">Prompt guide</a> · <a href="privacy.html">Privacy</a> · The preflight is a lightweight heuristic, not a guarantee of model behavior.</p>
+  </footer>
+
+  <script src="checker.js"></script>
+</body>
+</html>

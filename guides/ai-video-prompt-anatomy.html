@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Video Prompt Guide: The Six-Layer Production Brief</title>
+  <meta name="description" content="A practical AI-video prompting method for camera, motion, timing, framing, continuity and negative direction—with before-and-after examples.">
+  <meta name="theme-color" content="#07110e">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI Video Prompt Anatomy: The Six-Layer Production Brief">
+  <meta property="og:description" content="Turn a polished but vague prompt into explicit, testable AI-video production direction.">
+  <meta property="og:image" content="../assets/before-after.png">
+  <meta property="og:site_name" content="Quercia2">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Video Prompt Anatomy: The Six-Layer Production Brief",
+    "description": "A practical method for making camera, motion, timing, framing, continuity and negative direction explicit in AI-video prompts.",
+    "datePublished": "2026-07-17",
+    "dateModified": "2026-07-17",
+    "author": {"@type": "Organization", "name": "Quercia2"},
+    "publisher": {"@type": "Organization", "name": "Quercia2"},
+    "image": "../assets/before-after.png"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to guide</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="MotionPrompt Studio home">
+      <span class="brand-mark" aria-hidden="true">Q2</span>
+      <span>Quercia2</span>
+    </a>
+    <nav class="header-actions" aria-label="Primary navigation">
+      <a class="header-link" href="../prompt-checker.html">Free prompt checker</a>
+      <a class="header-cta tracked-link" data-placement="guide_header" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=prompt_guide&amp;utm_medium=organic&amp;utm_campaign=founding_studio_launch">Get MotionPrompt Studio</a>
+    </nav>
+  </header>
+
+  <main class="article-page" id="article">
+    <p class="article-kicker">AI-video production guide</p>
+    <h1>Prompt prose is not production direction.</h1>
+    <p class="article-deck">A useful AI-video brief separates six decisions the model would otherwise have to guess: camera, motion, timing, framing, continuity and negative direction.</p>
+    <div class="article-meta"><span>By Quercia2</span><span>Published 17 July 2026</span><span>10-minute read</span></div>
+    <img src="../assets/before-after.png" width="1200" height="800" alt="Before and after comparison of an overloaded prompt and a structured AI-video production brief">
+
+    <p>A prompt can sound cinematic and still be impossible to direct. Words such as “dynamic”, “natural”, “epic” and “realistic” describe a desired feeling, but they rarely settle the physical decisions that shape a shot.</p>
+    <p>The model still needs to resolve basic questions: Is the camera locked or moving? What exactly does the subject do? When does the action start and finish? Which details must remain unchanged? Which visible failures matter most?</p>
+
+    <div class="article-example bad">
+      <span>POLISHED, BUT VAGUE</span>
+      <p>A cinematic close-up of a woman holding a skincare bottle, moving naturally, beautiful light, dynamic camera, realistic, no glitches.</p>
+    </div>
+
+    <p>This sentence supplies a subject and a mood. It does not supply a testable shot. “Moving naturally” could mean a wrist turn, a head turn, walking, breathing or all of them. “Dynamic camera” could mean an orbit, handheld motion, a dolly or aggressive reframing. “No glitches” does not tell the model which objects or features must remain stable.</p>
+
+    <h2>The six-layer preflight</h2>
+
+    <section class="layer-card">
+      <h3>1. Camera</h3>
+      <p>Choose one primary camera behavior. A locked tripod, slow dolly, lateral tracking shot and handheld close-up are different production instructions. More camera verbs do not create more precision.</p>
+      <p><strong>Useful questions:</strong> What is the shot size? Is the camera locked or moving? If moving, in which direction and at what pace? Should focus remain fixed?</p>
+    </section>
+
+    <section class="layer-card">
+      <h3>2. Subject or object motion</h3>
+      <p>Name one observable action. Replace “moves naturally” with a physical start state, movement and end state.</p>
+      <p><strong>Example:</strong> “The creator rotates her wrist once until the bottle label faces the camera; head and shoulders remain still.”</p>
+    </section>
+
+    <section class="layer-card">
+      <h3>3. Timing</h3>
+      <p>Give the action an interval. “Slowly” is relative. “Over two seconds” creates something that can be checked against the output.</p>
+      <p>Timing is especially important when several events must happen in sequence. If the shot is short, remove secondary actions rather than compressing them into the same moment.</p>
+    </section>
+
+    <section class="layer-card">
+      <h3>4. Framing and format</h3>
+      <p>State aspect ratio and composition where they matter. A vertical product close-up and a horizontal cinematic medium shot create different spatial pressures.</p>
+      <p><strong>Useful details:</strong> aspect ratio, close-up or wide shot, subject placement, headroom, product visibility and whether reframing is allowed.</p>
+    </section>
+
+    <section class="layer-card">
+      <h3>5. Continuity</h3>
+      <p>Continuity direction identifies what must survive every frame. For a person, that may be face identity, wardrobe and finger count. For a product, it may be geometry, cap shape, logo orientation, label text, material and scale.</p>
+      <p>Write continuity as a preservation rule rather than another style request: “Preserve bottle geometry, cap shape, label placement and logo orientation throughout.”</p>
+    </section>
+
+    <section class="layer-card">
+      <h3>6. Negative direction</h3>
+      <p>Negative direction works best when it names visible failure modes. “No glitches” is generic. “No camera orbit, focus breathing, hand deformation, text drift or background warping” is inspectable.</p>
+      <p>Keep the list connected to the shot. A long universal negative prompt can compete with the primary direction and make diagnosis harder after a failed test.</p>
+    </section>
+
+    <h2>Put the layers together</h2>
+
+    <div class="article-example good">
+      <span>STRUCTURED PRODUCTION BRIEF</span>
+      <p>9:16 close-up product shot. The creator holds the same skincare bottle label-forward at sternum height and rotates her wrist once over two seconds. Head, shoulders and gaze remain stable. Locked tripod camera, 85 mm lens, centered framing, no orbit or reframing. Preserve face identity, finger count, bottle geometry, cap shape, scale and logo orientation throughout. No focus breathing, hand deformation, text drift, changing object count, lighting flicker or background warping.</p>
+    </div>
+
+    <p>The structured version is not guaranteed to produce a perfect generation. No prompt can guarantee model behavior. Its advantage is diagnostic: if the output fails, you can identify which layer failed and change that layer without rewriting the entire creative intent.</p>
+
+    <h2>Repair one failed layer at a time</h2>
+
+    <p>A common reaction to a bad output is to make the whole prompt longer. That often hides the cause. Use a narrower loop:</p>
+
+    <ol>
+      <li><strong>Keep what worked.</strong> If camera and framing are correct, preserve them verbatim.</li>
+      <li><strong>Name the visible failure.</strong> Identity drift, product mutation, camera shake and background warping require different repairs.</li>
+      <li><strong>Add one targeted constraint.</strong> Avoid stacking several unrelated fixes in the same iteration.</li>
+      <li><strong>Run a controlled test.</strong> Compare the result against the same brief rather than changing prompt and settings simultaneously.</li>
+    </ol>
+
+    <h2>A reusable prompt skeleton</h2>
+
+    <div class="article-example good">
+      <span>TEMPLATE</span>
+      <p>[FORMAT + SHOT SIZE]. [SUBJECT + SETTING]. [ONE PRIMARY ACTION] over [DURATION]. [CAMERA BEHAVIOR + LENS/FRAMING]. Preserve [CONTINUITY ELEMENTS] throughout. No [SHOT-SPECIFIC FAILURE MODES].</p>
+    </div>
+
+    <p>Use the skeleton as a checklist, not a rigid grammar. Some shots need performance or lighting direction; others need precise object physics. The purpose is to expose missing decisions before the generation, not to make every prompt look identical.</p>
+
+    <h2>Quick preflight checklist</h2>
+
+    <ul>
+      <li>Does the prompt name one primary camera behavior?</li>
+      <li>Is the subject or object action observable?</li>
+      <li>Is timing explicit where motion matters?</li>
+      <li>Are aspect ratio and composition stated?</li>
+      <li>Are identity, geometry and object counts protected?</li>
+      <li>Are negative instructions tied to visible failures?</li>
+      <li>Do any instructions contradict each other?</li>
+      <li>Could one secondary action be removed?</li>
+    </ul>
+
+    <section class="article-cta">
+      <p class="eyebrow">Check or build the brief</p>
+      <h2>Run the free preflight—or use the complete production system.</h2>
+      <p>The free checker scores the six signals locally. MotionPrompt Studio adds a structured builder, readiness scan, 18 presets, 84 scenarios and 15 targeted repair blocks.</p>
+      <a class="button button-secondary" href="../prompt-checker.html?utm_source=prompt_guide&amp;utm_medium=organic&amp;utm_campaign=prompt_preflight_launch">Use the free checker</a>
+      <a class="button button-primary tracked-link" data-placement="guide_final" href="https://quercia2.gumroad.com/l/MotionPromptStudio?utm_source=prompt_guide&amp;utm_medium=organic&amp;utm_campaign=founding_studio_launch">Explore MotionPrompt Studio</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">Q2</span><span>Quercia2</span></a>
+    <p><a href="../prompt-checker.html">Free Prompt Preflight</a> · <a href="../privacy.html">Privacy</a> · Product and model names belong to their respective owners.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

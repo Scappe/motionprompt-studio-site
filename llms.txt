@@ -1,0 +1,24 @@
+# Quercia2
+
+> Quercia2 publishes MotionPrompt Studio, an offline system for building, checking and exporting controlled AI-video production prompts.
+
+## Free tool
+
+- [AI Video Prompt Preflight](prompt-checker.html): A free local checker for camera, motion, timing, framing, continuity and negative direction. Prompts are not uploaded.
+
+## Guide
+
+- [AI Video Prompt Anatomy](guides/ai-video-prompt-anatomy.html): A practical six-layer method for turning prompt prose into a testable production brief.
+
+## Product
+
+- [MotionPrompt Studio](index.html): Full product overview, compatibility, included files and license summary.
+- [Purchase through Gumroad](https://quercia2.gumroad.com/l/MotionPromptStudio): Official product and checkout provider.
+
+## Product facts
+
+- Runs locally in a current desktop browser.
+- Requires no account, API key, installation or prompt upload.
+- Includes 18 editable presets, 15 targeted repair blocks, 60 blueprint prompts, 24 client-ready campaign briefs and an 8-page visual guide.
+- Supports direction workflows for Kling, Veo, Runway, WAN, Seedance, Hailuo and other text-to-video or image-to-video models.
+- Does not generate video and does not guarantee a specific model result.
